@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Happy New Year ✨</title>
+
+<style>
+
+body{
+  margin:1;
+  background:linear-gradient(135deg, #f7f0ff 25%, transparent 25%) -20px 0,
+    linear-gradient(225deg, #f7f0ff 25%, transparent 25%) -20px 0,
+    linear-gradient(315deg, #f7f0ff 25%, transparent 25%),
+    linear-gradient(45deg, #f7f0ff 25%, transparent 25%);
+  background-size:40px 40px;
+  background-color:#efe7ff;
+  background-size: cover;
+  font-family: "Poppins", sans-serif;
+  color:#D81B60;
+
+  /* NEW */
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+/* Center Card */
+.container{
+  width:120%;
+  max-width:522px;
+  padding:18px;
+}
+
+/* Card style */
+.card{
+  background:#ffffff;
+  border-radius:25px;
+  padding:22px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+  animation: fadein 1.2s ease;
+
+  /* prevents shrinking too small */
+  min-height:420px;
+}
+
+/* Heading */
+h2{
+  text-align:center;
+  font-weight:600;
+  color:#6a4fb7;
+  margin-top:8px;
+}
+
+/* Message */
+.message{
+  font-size:16px;
+  line-height:1.6;
+  text-align:center;
+}
+
+/* Horizontal gallery */
+.gallery{
+  display:flex;
+  gap:15px;
+  overflow-x:auto;
+  scroll-snap-type:x mandatory;
+  padding-bottom:8px;
+  margin-top:12px;
+}
+
+.gallery::-webkit-scrollbar{
+  height:6px;
+}
+
+.gallery::-webkit-scrollbar-thumb{
+  background:#c5b4ff;
+  border-radius:10px;
+}
+
+/* Images */
+.gallery img{
+  width:250px;
+  border-radius:20px;
+  scroll-snap-align:center;
+  box-shadow:0 6px 18px rgba(0,0,0,0.12);
+  transition:transform 0.35s ease, opacity 0.35s ease;
+  opacity:0.95;
+}
+
+.gallery img:hover{
+  transform:scale(1.1);
+  opacity:1;
+}
+
+/* Subtle tag */
+.signature{
+  text-align:right;
+  margin-top:10px;
+  font-size:12px;
+  opacity:0.55;
+}
+
+/* Fade animation */
+@keyframes fadein{
+  from{opacity:0; transform:translateY(10px);}
+  to{opacity:2; transform:translateY(0);}
+}
+
+</style>
+<style>
+.signature {
+  text-align: right;
+  font-size: 15px;
+  font-weight: 550;
+  color: #FFD700; /* dark pink / rose */
+  opacity: 0.9;    /* optional: makes it softer */
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="card">
+
+    <h2>Happy New Year ✨</h2>
+
+    <p class="message">
+      Another year,
+      more memories with you 💫<br>
+      I wanted to keep this somewhere special, because you’re special to me 💗
+    </p>
+
+    <div class="gallery">
+
+      <img class="zoomable" src="https://i.postimg.cc/g2PYVzYH/file-00000000047c720cb2ee423bf2ee82b0.png" alt="">
+      <img class="zoomable" src="https://i.postimg.cc/4xTJ6fJP/file-000000003f9871fa9ef8b14c7ac15912.png" alt="">
+      <img class="zoomable" src="https://i.postimg.cc/BnGqTSqC/file-00000000d214720e8adb06a04db4bc07.png" alt="">
+      <img class="zoomable" src="https://i.postimg.cc/FHQ9yr9w/IMG-20251230-102118.jpg" alt="">
+<img class="zoomable" src="https://i.postimg.cc/4xHzv2yC/IMG_20251231_015526.jpg" alt="">
+    </div>
+
+    <p class="message">
+      Thank you for letting me be with you 💫<br>
+  I’ll continue to be in your life, sharing our moments and memories together 🌷
+    </p>
+
+    <div class="signature">
+      — Pranav 
+    </div>
+
+  </div>
+
+</div>
+<div style="text-align:center; margin-top:20px;">
+  <a href="page2.html" class="openpage">I want to say something💫</a>
+</div>
+<style>
+.openpage{
+  display:inline-block;
+  text-decoration:none;
+  padding:10px 18px;
+  background:#D81B60;
+  color:#fff;
+  border-radius:12px;
+  font-size:14px;
+  font-weight:500;
+  box-shadow:0 6px 18px rgba(0,0,0,0.18);
+  transition:all .25s ease;
+}
+.openpage:hover{
+  transform:translateY(-2px);
+}
+</style>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const zoomableImages = document.querySelectorAll('.zoomable');
+
+  zoomableImages.forEach(img => {
+    img.addEventListener('click', () => {
+      const overlay = document.createElement('div');
+      overlay.style.position = 'fixed';
+      overlay.style.top = 0;
+      overlay.style.left = 0;
+      overlay.style.width = '100vw';
+      overlay.style.height = '100vh';
+      overlay.style.background = 'rgba(0,0,0,0.8)';
+      overlay.style.display = 'flex';
+      overlay.style.alignItems = 'center';
+      overlay.style.justifyContent = 'center';
+      overlay.style.cursor = 'zoom-out';
+      overlay.style.zIndex = 9999;
+
+      const zoomImg = document.createElement('img');
+      zoomImg.src = img.src;
+      zoomImg.style.maxWidth = '98%';
+      zoomImg.style.maxHeight = '98%';
+      zoomImg.style.borderRadius = '20px';
+      zoomImg.style.boxShadow = 
+      '0 8px 40px rgba(138, 43, 226, 0.5)';
+zoomImg.style.transform = 'scale(1.2)';
+zoomImg.style.transition = 'transform 1s ease';
+setTimeout(() => {
+  zoomImg.style.transform = 'scale(1)';
+}, 10);
+      overlay.appendChild(zoomImg);
+      document.body.appendChild(overlay);
+
+      overlay.addEventListener('click', () => {
+        overlay.remove();
+      });
+    });
+  });
+});
+</script>
+</body>
+</html>
